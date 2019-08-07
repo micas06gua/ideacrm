@@ -1,0 +1,29 @@
+<script type="text/javascript">
+  (function(window) {
+    var idc = "{{ settings.idc }}";
+    var pre_empresa = "{{settings.pre_empresa}}";
+    var pre_depto = "{{settings.pre_depto }}";
+    var floatingchat = "{{settings.floatingchat}}";
+    var corbarra = "{{settings.corbarra}}";
+    var textobarra = "{{settings.textobarra}}";
+    var cortextodabarra = "{{settings.cortextodabarra}}";
+    var onlychat = "{{settings.onlychat}}";
+    if (idc) {
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.async = true;
+      script.src =
+        "//webapp.ideacrm.com.br/monitoramento.js.aspx?idc=" +
+        idc +
+        (pre_empresa ? "&pre_empresa=" + pre_empresa : "") +
+        (pre_depto ? "&pre_depto=" + pre_depto : "") +
+        (floatingchat ? "&floatingchat=" + floatingchat : "") +
+        (corbarra ? "&corbarra=" + corbarra : "") +
+        (textobarra ? "&textobarra=" + textobarra : "") +
+        (cortextodabarra ? "&cortextodabarra=" + cortextodabarra : "") +
+        (onlychat ? "&onlychat=" + onlychat : "");
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(script, s);
+    }
+  })(window);
+</script>

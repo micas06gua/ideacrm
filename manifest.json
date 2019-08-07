@@ -1,0 +1,58 @@
+{
+  "name": "ideacrm",
+  "vendor": "vtex",
+  "version": "0.0.0",
+  "description": "Idea CRM pixel app",
+  "builders": {
+    "pixel": "0.x"
+  },
+  "dependencies": {
+    "vtex.pixel-interfaces": "1.x"
+  },
+  "credentialType": "absolute",
+  "settingsSchema": {
+    "title": "Idea CRM Options",
+    "type": "object",
+    "properties": {
+      "idc": {
+        "title": "Idea CRM ID",
+        "description": "Enter your Idea CRM ID",
+        "type": "string"
+      },
+      "pre_empresa": {
+        "title": "Idea CRM Company",
+        "description": "Enter your Idea CRM Company",
+        "type": "string"
+      },
+      "pre_depto": {
+        "title": "Idea CRM Departament",
+        "description": "Enter your Idea CRM Departament",
+        "type": "string"
+      },
+      "floatingchat": {
+        "title": "Enable Idea CRM floating chat",
+        "type": "boolean"
+      },
+      "corbarra": {
+        "title": "Idea CRM chat bar color",
+        "description": "Enter your favorite bar color in hexadecimal Ex:e31837",
+        "type": "string"
+      },
+      "textobarra": {
+        "title": "Idea CRM chat bar text",
+        "description": "Enter the bar text",
+        "type": "string"
+      },
+      "cortextodabarra": {
+        "title": "Idea CRM chat bar text color",
+        "description": "Enter your favorite bar color text hexadecimal Ex:ffffff",
+        "type": "string"
+      },
+      "onlychat": {
+        "title": "Idea CRM show only chat",
+        "type": "boolean"
+      }
+    }
+  },
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}
